@@ -18,7 +18,7 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>3.5.0</version>
+      <version>3.5.4</version>
     </dependency>
 
     <dependency>
@@ -42,7 +42,7 @@
     <dependency>
       <groupId>io.vertx</groupId>
       <artifactId>vertx-core</artifactId>
-      <version>3.5.0</version>
+      <version>3.5.4</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
@@ -80,14 +80,12 @@
             </goals>
             <configuration>
               <transformers>
-                <transformer
-                  implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
                     <Main-Class>io.vertx.example.HelloWorldServer</Main-Class>
                   </manifestEntries>
                 </transformer>
-                <transformer
-                  implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
                   <resource>META-INF/services/io.vertx.core.spi.VerticleFactory</resource>
                 </transformer>
               </transformers>
